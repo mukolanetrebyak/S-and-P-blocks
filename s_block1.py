@@ -1,4 +1,4 @@
-def s_box_direct(input_block):
+def s_block_direct(input_block):
     s_box = [
         [4, 10, 43, 2, 6, 12, 78, 17], #заданий нами S блок
         [1, 2, 11, 0, 15, 31, 14, 19],
