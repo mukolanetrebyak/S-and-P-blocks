@@ -8,8 +8,8 @@ def s_block_direct(input_block):
     tetrad1 = input_block >> 4  #Перша тетрада з 4 першими бітами
     tetrad2 = input_block & 0x0F  #Друга тетрада з 4 іншими бітами
     
-    output_tetrad1 = s_block[tetrad1 >> 2][tetrad1 & 0x03] #функція заміни значень за допомогою блоку
-    output_tetrad2 = s_block[tetrad2 >> 2][tetrad2 & 0x03]
+    output_tetrad1 = s_box[tetrad1 >> 2][tetrad1 & 0x03] #функція заміни значень за допомогою блоку
+    output_tetrad2 = s_box[tetrad2 >> 2][tetrad2 & 0x03]
     
     output_block = (output_tetrad1 << 4) | output_tetrad2
     return output_block
